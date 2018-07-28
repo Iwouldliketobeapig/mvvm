@@ -1,19 +1,4 @@
-function observer(obj) {
-  Object.keys(obj).forEach(key => {
-    Object.defineProperty(obj, key, {
-      configurable: true,
-      enumerable: true,
-      get: () => {
-        // some code
-        console.log('get');
-      },
-      set: () => {
-        // some code
-        console.log('set');
-      }
-    });
-  });
-}
+import observer from './observer';
 
 class Vue {
   constructor(options) {
@@ -21,4 +6,5 @@ class Vue {
     observer(this._data);
   }
 }
+
 export default Vue;

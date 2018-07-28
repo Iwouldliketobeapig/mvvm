@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon test/index.js --exec babel-node"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,14 @@
   "bugs": {
     "url": "https://github.com/Iwouldliketobeapig/mvvm/issues"
   },
-  "homepage": "https://github.com/Iwouldliketobeapig/mvvm#readme"
+  "homepage": "https://github.com/Iwouldliketobeapig/mvvm#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "nodemon": "^1.18.3"
+  }
 }

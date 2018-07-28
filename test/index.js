@@ -1,11 +1,12 @@
-import Index from '../src/index.js';
+import Vue from '../src/index.js';
 
 let app = new Vue({
   el: 'test',
-  template: '<span>{{test}}</span>'
   data: {
     test: 'test'
   }
 });
 
-console.log(app);
+console.log(app._data.test);
+app._data.test = 123;
+console.log(app._data.test);
